@@ -5,33 +5,35 @@
 
 body {
     margin: 0;
-    padding: 30px 15px;
+    padding: 25px 15px;
     font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #222;
+    background: #f7f7f7;
+    color: #333;
 }
 
 .container {
-    max-width: 750px;
-    margin: auto;
-    background-color: white;
+    max-width: 680px;
+    margin: 0 auto;
     padding: 25px;
-    border-radius: 10px;
+    background: white;
+    border: 1px solid #e5e5e5;
 }
 
 h1 {
-    margin-bottom: 5px;
-    color: #234b75;
+    margin: 0 0 8px;
+    font-size: 27px;
+    color: #333;
 }
 
 .subtitle {
-    color: #666;
-    margin-bottom: 25px;
+    margin: 0 0 25px;
+    color: #777;
+    font-size: 14px;
 }
 
 h2 {
-    font-size: 20px;
-    margin-bottom: 18px;
+    margin: 0 0 15px;
+    font-size: 19px;
 }
 
 label {
@@ -43,81 +45,97 @@ label {
 input,
 select {
     width: 100%;
-    padding: 11px;
+    padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 3px;
+    background: white;
     font-size: 14px;
 }
 
+input:focus,
+select:focus {
+    outline: 1px solid #777;
+}
+
 button {
-    padding: 11px 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #315f91;
+    padding: 10px 14px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    background: #333;
     color: white;
     cursor: pointer;
+    font-size: 14px;
 }
 
 button:hover {
-    background-color: #24496f;
+    background: #555;
 }
 
-.budget-section,
-.form-section,
-.expense-section {
-    margin-top: 25px;
+.budget-section {
+    margin-bottom: 25px;
 }
 
 .budget-input {
     display: flex;
-    gap: 10px;
+    gap: 8px;
 }
 
 .budget-input input {
     flex: 1;
+    min-width: 0;
 }
 
 .summary {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
-    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .summary-card {
-    padding: 15px;
-    background-color: #edf3f8;
-    border-radius: 7px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    background: #fafafa;
     overflow-wrap: anywhere;
 }
 
 .summary-card p {
     margin: 0 0 10px;
-    font-size: 13px;
-    color: #555;
+    color: #777;
+    font-size: 12px;
 }
 
 .summary-card h3 {
     margin: 0;
-    font-size: 17px;
+    font-size: 16px;
+}
+
+.form-section {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ddd;
 }
 
 .add-button {
     width: 100%;
 }
 
+.expense-section {
+    margin-top: 25px;
+}
+
 #expenseList {
     list-style: none;
+    margin: 0;
     padding: 0;
 }
 
 .expense-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 12px;
-    padding: 15px 0;
+    padding: 14px 0;
     border-bottom: 1px solid #eee;
 }
 
@@ -126,36 +144,49 @@ button:hover {
     overflow-wrap: anywhere;
 }
 
+.expense-info strong {
+    font-size: 14px;
+}
+
 .expense-info p {
     margin: 5px 0 0;
-    font-size: 13px;
-    color: #666;
+    color: #777;
+    font-size: 12px;
 }
 
 .delete-button {
-    background-color: #c74747;
     flex-shrink: 0;
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+    background: white;
+    color: #444;
 }
 
 .delete-button:hover {
-    background-color: #a83232;
+    background: #eee;
 }
 
 .empty-message {
-    color: #777;
-    padding: 15px 0;
+    padding: 12px 0;
+    color: #888;
+    font-size: 14px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .container {
         padding: 18px;
     }
 
-    .summary {
-        grid-template-columns: 1fr;
+    h1 {
+        font-size: 23px;
     }
 
-    .expense-item {
-        align-items: flex-start;
+    .summary {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .summary-card {
+        padding: 10px;
     }
 }

@@ -11,10 +11,10 @@
 
     <div class="container">
         <h1>Daily Expense Tracker</h1>
-        <p class="subtitle">Catat dan kelola pengeluaran harianmu.</p>
+        <p class="subtitle">Uang ke mana aja, sih? Yuk, cek pengeluaranmu!</p>
 
         <div class="budget-section">
-            <label for="budget">Anggaran Harian (Rp)</label>
+            <label for="budget">Budget Hari ini? (Rp)</label>
             <div class="budget-input">
                 <input type="number" id="budget" placeholder="Contoh: 50000" min="0">
                 <button id="saveBudget">Simpan</button>
@@ -23,7 +23,7 @@
 
         <div class="summary">
             <div class="summary-card">
-                <p>Anggaran</p>
+                <p>Budget Hari Ini</p>
                 <h3 id="totalBudget">Rp0</h3>
             </div>
 
@@ -42,7 +42,7 @@
             <h2>Tambah Pengeluaran</h2>
 
             <form id="expenseForm">
-                <label for="expenseName">Nama Pengeluaran</label>
+                <label for="expenseName">Buat Apa Nih?</label>
                 <input type="text" id="expenseName"
                     placeholder="Contoh: Makan siang" required>
 
@@ -70,7 +70,7 @@
             <h2>Daftar Pengeluaran</h2>
 
             <ul id="expenseList">
-                <li class="empty-message">Belum ada pengeluaran.</li>
+                <li class="empty-message">Belum ada pengeluaran</li>
             </ul>
         </div>
     </div>
