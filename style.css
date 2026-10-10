@@ -1,0 +1,161 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h1 {
+    margin-bottom: 5px;
+    color: #234b75;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    padding: 11px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #315f91;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #24496f;
+}
+
+.budget-section,
+.form-section,
+.expense-section {
+    margin-top: 25px;
+}
+
+.budget-input {
+    display: flex;
+    gap: 10px;
+}
+
+.budget-input input {
+    flex: 1;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.summary-card {
+    padding: 15px;
+    background-color: #edf3f8;
+    border-radius: 7px;
+    overflow-wrap: anywhere;
+}
+
+.summary-card p {
+    margin: 0 0 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.summary-card h3 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.add-button {
+    width: 100%;
+}
+
+#expenseList {
+    list-style: none;
+    padding: 0;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.expense-info {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.expense-info p {
+    margin: 5px 0 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.delete-button {
+    background-color: #c74747;
+    flex-shrink: 0;
+}
+
+.delete-button:hover {
+    background-color: #a83232;
+}
+
+.empty-message {
+    color: #777;
+    padding: 15px 0;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 18px;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .expense-item {
+        align-items: flex-start;
+    }
+}
